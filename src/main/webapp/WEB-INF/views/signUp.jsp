@@ -8,5 +8,16 @@
 </head>
 <body>
 Sign Up works
+
+<form action="/public/saveuser" method="post">
+	Username : <input type="text" name="username"/><br><br>
+
+	Password : <input type="password" name="password"/><br><br>
+	<input type="hidden" name="${_csrf.parameterName}" value=${_csrf.token}/>
+
+	<input type="submit"  value="Signup" />
+
+
+</form>
 </body>
 </html>
